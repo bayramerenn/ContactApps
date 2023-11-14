@@ -1,0 +1,67 @@
+version: '3.8'
+
+services:
+  apigateway:
+    container_name: apigateway
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Staging
+    ports:
+      - "7000:80"
+    networks:
+      - webnet
+
+  contact-api:
+    container_name: contact-api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Staging
+    ports:
+      - "7001:80"
+    networks:
+      - webnet
+
+
+  report-api:
+    container_name: report-api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Staging
+    ports:
+      - "7002:80"
+    networks:
+      - webnet
+
+  postgredb:
+    container_name: postgredb
+    restart: always
+    ports:
+      - "5435:5432"
+    volumes:
+      - risedatabase_volume:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=Password896*
+      - POSTGRES_DB=postgredb
+      - TZ=Europe/Istanbul
+    networks:
+      - webnet
+ 
+  rabbitmq:
+    container_name: rabbitmq
+    restart: always
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - webnet
+
+  redisdb:
+    container_name: redisdb
+    restart: always
+    ports:
+      - "6379:6379"
+    networks:
+      - webnet
+
+networks:
+  webnet:
+    driver: bridge
+
