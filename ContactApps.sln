@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportingService.Infrastruc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportingService.Test", "src\Services\ReportingService\ReportingService.Test\ReportingService.Test.csproj", "{8EF97ABA-B145-4755-95D3-BD9E6FE3F73C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "src\Common\Shared\Shared.csproj", "{2D81F2C0-CBEA-4418-A9B0-688643680E38}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{8EF97ABA-B145-4755-95D3-BD9E6FE3F73C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EF97ABA-B145-4755-95D3-BD9E6FE3F73C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EF97ABA-B145-4755-95D3-BD9E6FE3F73C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D81F2C0-CBEA-4418-A9B0-688643680E38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D81F2C0-CBEA-4418-A9B0-688643680E38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D81F2C0-CBEA-4418-A9B0-688643680E38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D81F2C0-CBEA-4418-A9B0-688643680E38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -101,6 +107,7 @@ Global
 		{58707789-162E-460D-9BD0-78358BC75896} = {5A385187-5C46-4355-BE71-E57E4B016268}
 		{85FC0025-AC2A-4F2C-BBD4-16B775EFBDD3} = {5A385187-5C46-4355-BE71-E57E4B016268}
 		{8EF97ABA-B145-4755-95D3-BD9E6FE3F73C} = {5A385187-5C46-4355-BE71-E57E4B016268}
+		{2D81F2C0-CBEA-4418-A9B0-688643680E38} = {F11BE262-9FE4-43A4-A552-0DFC0BCB1A63}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {46967AB9-CD7B-4E2C-85EC-A08C793205D4}
