@@ -1,3 +1,4 @@
+using ContactDirectoryService.Application;
 using ContactDirectoryService.Infrastructure;
 using Shared.Middleware;
 
@@ -11,6 +12,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services
+    .AddConfigureApplication()
     .AddConfigureInfrastructure(builder.Configuration);
 
 var app = builder.Build();
