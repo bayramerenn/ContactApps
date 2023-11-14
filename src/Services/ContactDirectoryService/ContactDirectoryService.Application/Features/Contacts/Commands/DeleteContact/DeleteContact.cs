@@ -4,7 +4,7 @@ using ContactDirectoryService.Application.Common.Interfaces;
 using MediatR;
 using Shared.Constants;
 
-namespace ContactDirectoryService.Application.Features.Contract.Commands.DeleteContact
+namespace ContactDirectoryService.Application.Features.Contacts.Commands
 {
     public record DeleteContactCommand(Guid Id) : IRequest<Unit>, ICacheRemoverRequest
     {

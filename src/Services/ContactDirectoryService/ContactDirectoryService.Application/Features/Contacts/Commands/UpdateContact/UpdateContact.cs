@@ -5,7 +5,7 @@ using ContactDirectoryService.Application.Common.Interfaces;
 using MediatR;
 using Shared.Constants;
 
-namespace ContactDirectoryService.Application.Features.Contract.Commands.UpdateContact
+namespace ContactDirectoryService.Application.Features.Contacts.Commands
 {
     public record UpdateContactCommand(Guid Id, string FirstName, string LastName, string Company) : IRequest<Unit>, ICacheRemoverRequest
     {

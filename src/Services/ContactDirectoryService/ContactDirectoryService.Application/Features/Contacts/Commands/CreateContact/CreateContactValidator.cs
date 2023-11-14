@@ -1,10 +1,10 @@
 ﻿using FluentValidation;
 
-namespace ContactDirectoryService.Application.Features.Contract.Commands.UpdateContact
+namespace ContactDirectoryService.Application.Features.Contacts.Commands
 {
-    public class UpdateContactValidator : AbstractValidator<UpdateContactCommand>
+    public class CreateContactValidator : AbstractValidator<CreateContactCommand>
     {
-        public UpdateContactValidator()
+        public CreateContactValidator()
         {
             RuleFor(c => c.FirstName).NotEmpty().WithMessage("Firstname field cannot be empty.");
             RuleFor(c => c.LastName).NotEmpty().WithMessage("LastName field cannot be empty.");

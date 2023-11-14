@@ -1,4 +1,4 @@
-﻿using ContactDirectoryService.Application.Features.Contract.Commands.CreateContact;
+﻿using ContactDirectoryService.Application.Features.Contacts.Commands;
 
 namespace ContactDirectoryService.Test.Features.Contacts.Commands
 {

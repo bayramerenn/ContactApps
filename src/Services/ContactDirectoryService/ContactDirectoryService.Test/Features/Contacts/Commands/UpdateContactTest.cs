@@ -1,7 +1,5 @@
 ﻿using Ardalis.GuardClauses;
-using ContactDirectoryService.Application.Features.Contract.Commands.CreateContact;
-using ContactDirectoryService.Application.Features.Contract.Commands.DeleteContact;
-using ContactDirectoryService.Application.Features.Contract.Commands.UpdateContact;
+using ContactDirectoryService.Application.Features.Contacts.Commands;
 using ContactDirectoryService.Domain.Entities;
 
 namespace ContactDirectoryService.Test.Features.Contacts.Commands

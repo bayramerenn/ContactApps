@@ -5,7 +5,7 @@ using ContactDirectoryService.Domain.Entities;
 using MediatR;
 using Shared.Constants;
 
-namespace ContactDirectoryService.Application.Features.Contract.Commands.CreateContact
+namespace ContactDirectoryService.Application.Features.Contacts.Commands
 {
     public record CreateContactCommand(string FirstName, string LastName, string Company) : IRequest<Guid>, ICacheRemoverRequest
     {
