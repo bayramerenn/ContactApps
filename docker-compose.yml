@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  apigateway:
+    image: ${DOCKER_REGISTRY-}apigateway
+    build:
+      context: .
+      dockerfile: src/Gateways/ApiGateway/Dockerfile
+
+  contact-api:
+    image: ${DOCKER_REGISTRY-}contactdirectoryserviceapi
+    build:
+      context: .
+      dockerfile: src/Services/ContactDirectoryService/ContactDirectoryService.API/Dockerfile
+
+
+  report-api:
+    image: ${DOCKER_REGISTRY-}reportingserviceapi
+    build:
+      context: .
+      dockerfile: src/Services/ReportingService/ReportingService.API/Dockerfile
+
+
+  postgredb:
+    image: postgres
+
+  rabbitmq:
+    image: rabbitmq:3-management
+
+  redisdb:
+    image: redis
+
+volumes:
+  risedatabase_volume:

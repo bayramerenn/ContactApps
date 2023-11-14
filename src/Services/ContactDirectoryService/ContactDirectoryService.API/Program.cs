@@ -1,5 +1,7 @@
 using ContactDirectoryService.Application;
 using ContactDirectoryService.Infrastructure;
+using ContactDirectoryService.Infrastructure.Persistence.Context;
+using Microsoft.EntityFrameworkCore;
 using Shared.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,18 +20,27 @@ builder.Services
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 app.UseAuthorization();
 
 app.MapControllers();
+
+using var scope = app.Services.CreateAsyncScope();
+var applicationDbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+
+try
+{
+    await applicationDbContext.Database.MigrateAsync();
+}
+catch
+{
+    await applicationDbContext.Database.EnsureDeletedAsync();
+    await applicationDbContext.Database.MigrateAsync();
+}
 
 app.Run();
 
