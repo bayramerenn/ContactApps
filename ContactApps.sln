@@ -15,27 +15,29 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ContactDirectoryService", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReportingService", "ReportingService", "{5A385187-5C46-4355-BE71-E57E4B016268}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactDirectoryService.API", "src\Services\ContactDirectoryService\ContactDirectoryService.API\ContactDirectoryService.API.csproj", "{2D8085CB-69B1-482C-933E-5E7163A8F362}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContactDirectoryService.API", "src\Services\ContactDirectoryService\ContactDirectoryService.API\ContactDirectoryService.API.csproj", "{2D8085CB-69B1-482C-933E-5E7163A8F362}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactDirectoryService.Application", "src\Services\ContactDirectoryService\ContactDirectoryService.Application\ContactDirectoryService.Application.csproj", "{EFDB6822-839E-4DD4-910A-3EF30AF81E46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContactDirectoryService.Application", "src\Services\ContactDirectoryService\ContactDirectoryService.Application\ContactDirectoryService.Application.csproj", "{EFDB6822-839E-4DD4-910A-3EF30AF81E46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactDirectoryService.Domain", "src\Services\ContactDirectoryService\ContactDirectoryService.Domain\ContactDirectoryService.Domain.csproj", "{4364F7CB-5A13-4320-83E3-DDBE0589723F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContactDirectoryService.Domain", "src\Services\ContactDirectoryService\ContactDirectoryService.Domain\ContactDirectoryService.Domain.csproj", "{4364F7CB-5A13-4320-83E3-DDBE0589723F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactDirectoryService.Infrastructure", "src\Services\ContactDirectoryService\ContactDirectoryService.Infrastructure\ContactDirectoryService.Infrastructure.csproj", "{3495628F-1205-4ABE-8969-81F3A88D0296}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContactDirectoryService.Infrastructure", "src\Services\ContactDirectoryService\ContactDirectoryService.Infrastructure\ContactDirectoryService.Infrastructure.csproj", "{3495628F-1205-4ABE-8969-81F3A88D0296}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactDirectoryService.Test", "src\Services\ContactDirectoryService\ContactDirectoryService.Test\ContactDirectoryService.Test.csproj", "{D3F0CBE5-B8C1-40BF-AD6B-ADC46BA3CA52}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContactDirectoryService.Test", "src\Services\ContactDirectoryService\ContactDirectoryService.Test\ContactDirectoryService.Test.csproj", "{D3F0CBE5-B8C1-40BF-AD6B-ADC46BA3CA52}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportingService.API", "src\Services\ReportingService\ReportingService.API\ReportingService.API.csproj", "{AF786EA4-AEB4-48AF-B5EF-A7EDEAA7A51B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReportingService.API", "src\Services\ReportingService\ReportingService.API\ReportingService.API.csproj", "{AF786EA4-AEB4-48AF-B5EF-A7EDEAA7A51B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportingService.Application", "src\Services\ReportingService\ReportingService.Application\ReportingService.Application.csproj", "{99B22E24-BB75-47D2-89A0-EB3062CABF1F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReportingService.Application", "src\Services\ReportingService\ReportingService.Application\ReportingService.Application.csproj", "{99B22E24-BB75-47D2-89A0-EB3062CABF1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportingService.Domain", "src\Services\ReportingService\ReportingService.Domain\ReportingService.Domain.csproj", "{58707789-162E-460D-9BD0-78358BC75896}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReportingService.Domain", "src\Services\ReportingService\ReportingService.Domain\ReportingService.Domain.csproj", "{58707789-162E-460D-9BD0-78358BC75896}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportingService.Infrastructure", "src\Services\ReportingService\ReportingService.Infrastructure\ReportingService.Infrastructure.csproj", "{85FC0025-AC2A-4F2C-BBD4-16B775EFBDD3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReportingService.Infrastructure", "src\Services\ReportingService\ReportingService.Infrastructure\ReportingService.Infrastructure.csproj", "{85FC0025-AC2A-4F2C-BBD4-16B775EFBDD3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportingService.Test", "src\Services\ReportingService\ReportingService.Test\ReportingService.Test.csproj", "{8EF97ABA-B145-4755-95D3-BD9E6FE3F73C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReportingService.Test", "src\Services\ReportingService\ReportingService.Test\ReportingService.Test.csproj", "{8EF97ABA-B145-4755-95D3-BD9E6FE3F73C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "src\Common\Shared\Shared.csproj", "{2D81F2C0-CBEA-4418-A9B0-688643680E38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "src\Common\Shared\Shared.csproj", "{2D81F2C0-CBEA-4418-A9B0-688643680E38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Event", "src\Common\Event\Event.csproj", "{952FB13F-DB99-462F-B295-FF0B028E2F6E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{2D81F2C0-CBEA-4418-A9B0-688643680E38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D81F2C0-CBEA-4418-A9B0-688643680E38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D81F2C0-CBEA-4418-A9B0-688643680E38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{952FB13F-DB99-462F-B295-FF0B028E2F6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{952FB13F-DB99-462F-B295-FF0B028E2F6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{952FB13F-DB99-462F-B295-FF0B028E2F6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{952FB13F-DB99-462F-B295-FF0B028E2F6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -108,6 +114,7 @@ Global
 		{85FC0025-AC2A-4F2C-BBD4-16B775EFBDD3} = {5A385187-5C46-4355-BE71-E57E4B016268}
 		{8EF97ABA-B145-4755-95D3-BD9E6FE3F73C} = {5A385187-5C46-4355-BE71-E57E4B016268}
 		{2D81F2C0-CBEA-4418-A9B0-688643680E38} = {F11BE262-9FE4-43A4-A552-0DFC0BCB1A63}
+		{952FB13F-DB99-462F-B295-FF0B028E2F6E} = {F11BE262-9FE4-43A4-A552-0DFC0BCB1A63}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {46967AB9-CD7B-4E2C-85EC-A08C793205D4}

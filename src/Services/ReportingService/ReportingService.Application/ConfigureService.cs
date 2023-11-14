@@ -1,5 +1,8 @@
 ﻿using Ardalis.GuardClauses;
+using Event;
+using Event.Services;
 using FluentValidation;
+using MassTransit;
 using MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -32,6 +35,30 @@ namespace ReportingService.Application
                 var redis = new RedisCache(host);
                 redis.Connect();
                 return redis;
+            });
+
+            return services;
+        }
+
+        public static IServiceCollection AddConfigureMassTransit(this IServiceCollection services, IConfiguration configuration)
+        {
+            services.AddScoped<IQueueService, QueueService>();
+
+            var rabbitMqSettings = configuration.GetSection(nameof(RabbitMQSettings)).Get<RabbitMQSettings>();
+
+            services.AddMassTransit(configure =>
+            {
+                configure.UsingRabbitMq((context, cfg) =>
+                {
+                    cfg.UseMessageRetry(r => r.Immediate(5));
+                    cfg.UseDelayedRedelivery(r => r.Intervals(TimeSpan.FromMinutes(5), TimeSpan.FromMinutes(15), TimeSpan.FromMinutes(30)));
+
+                    cfg.Host(rabbitMqSettings!.Url, rabbitMqSettings.Port, "/", host =>
+                    {
+                        host.Username(rabbitMqSettings.Username);
+                        host.Password(rabbitMqSettings.Password);
+                    });
+                });
             });
 
             return services;
