@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -8,6 +8,7 @@
 	<ItemGroup>
 		<PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.5.1" />
 		<PackageReference Include="Ardalis.GuardClauses" Version="4.1.1" />
+		<PackageReference Include="MediatR" Version="12.1.1" />
 		<PackageReference Include="StackExchange.Redis" Version="2.6.90" />
 		<FrameworkReference Include="Microsoft.AspNetCore.App" />
 	</ItemGroup>

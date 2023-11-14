@@ -1,5 +1,4 @@
 ﻿using Ardalis.GuardClauses;
-using ContactDirectoryService.Application.Common.Behaviours.Caching;
 using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.Configuration;
@@ -8,7 +7,7 @@ using Shared.Behaviours.Validator;
 using Shared.CacheService;
 using System.Reflection;
 
-namespace ContactDirectoryService.Application
+namespace ReportingService.Application
 {
     public static class ConfigureService
     {
@@ -22,8 +21,6 @@ namespace ContactDirectoryService.Application
             {
                 cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
                 cfg.AddBehavior(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
-                cfg.AddBehavior(typeof(IPipelineBehavior<,>), typeof(CachingBehavior<,>));
-                cfg.AddBehavior(typeof(IPipelineBehavior<,>), typeof(CacheRemovingBehavior<,>));
             });
 
             services.Configure<CacheSettings>(configuration.GetSection(nameof(CacheSettings)));

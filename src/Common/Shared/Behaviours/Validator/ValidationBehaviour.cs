@@ -2,7 +2,7 @@
 using MediatR;
 using ValidationException = Shared.Exceptions.ValidationException;
 
-namespace ContactDirectoryService.Application.Common.Behaviours.Validator;
+namespace Shared.Behaviours.Validator;
 
 public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
      where TRequest : notnull
