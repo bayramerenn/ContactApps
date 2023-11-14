@@ -24,7 +24,7 @@ namespace ContactDirectoryService.API.Controllers
             return Ok(await Sender.Send(command, cancellationToken));
         }
 
-        [HttpPost]
+        [HttpPut]
         public async Task<IActionResult> Update(UpdateContactCommand command, CancellationToken cancellationToken)
         {
             return Ok(await Sender.Send(command, cancellationToken));

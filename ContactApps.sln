@@ -39,6 +39,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "src\Common\Shared
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Event", "src\Common\Event\Event.csproj", "{952FB13F-DB99-462F-B295-FF0B028E2F6E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiGateway", "src\Gateways\ApiGateway\ApiGateway.csproj", "{A9F9172F-CBCA-4694-98F1-AFF43081949C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{952FB13F-DB99-462F-B295-FF0B028E2F6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{952FB13F-DB99-462F-B295-FF0B028E2F6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{952FB13F-DB99-462F-B295-FF0B028E2F6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9F9172F-CBCA-4694-98F1-AFF43081949C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9F9172F-CBCA-4694-98F1-AFF43081949C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9F9172F-CBCA-4694-98F1-AFF43081949C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9F9172F-CBCA-4694-98F1-AFF43081949C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -115,6 +121,7 @@ Global
 		{8EF97ABA-B145-4755-95D3-BD9E6FE3F73C} = {5A385187-5C46-4355-BE71-E57E4B016268}
 		{2D81F2C0-CBEA-4418-A9B0-688643680E38} = {F11BE262-9FE4-43A4-A552-0DFC0BCB1A63}
 		{952FB13F-DB99-462F-B295-FF0B028E2F6E} = {F11BE262-9FE4-43A4-A552-0DFC0BCB1A63}
+		{A9F9172F-CBCA-4694-98F1-AFF43081949C} = {84260B0D-28C4-4708-9174-237A38445F62}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {46967AB9-CD7B-4E2C-85EC-A08C793205D4}
