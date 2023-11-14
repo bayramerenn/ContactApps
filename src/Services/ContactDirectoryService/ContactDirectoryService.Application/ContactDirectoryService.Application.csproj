@@ -14,5 +14,9 @@
 	<ItemGroup>
 		<ProjectReference Include="..\ContactDirectoryService.Domain\ContactDirectoryService.Domain.csproj" />
 	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Features\Contract\Queries\" />
+	  <Folder Include="Features\Contract\Mapping\" />
+	</ItemGroup>
 
 </Project>
