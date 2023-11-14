@@ -6,6 +6,7 @@ using MassTransit;
 using MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ReportingService.Application.Consumers;
 using Shared.Behaviours.Validator;
 using Shared.CacheService;
 using System.Reflection;
@@ -48,6 +49,9 @@ namespace ReportingService.Application
 
             services.AddMassTransit(configure =>
             {
+                configure.AddConsumer<SuccessContractReportConsumer>();
+                configure.AddConsumer<FailContractReportConsumer>();
+
                 configure.UsingRabbitMq((context, cfg) =>
                 {
                     cfg.UseMessageRetry(r => r.Immediate(5));
@@ -57,6 +61,16 @@ namespace ReportingService.Application
                     {
                         host.Username(rabbitMqSettings.Username);
                         host.Password(rabbitMqSettings.Password);
+                    });
+
+                    cfg.ReceiveEndpoint(QueueConstants.SUCCESS_CONRACT_REPORT, e =>
+                    {
+                        e.ConfigureConsumer<SuccessContractReportConsumer>(context);
+                    });
+
+                    cfg.ReceiveEndpoint(QueueConstants.FAIL_CONRACT_REPORT, e =>
+                    {
+                        e.ConfigureConsumer<FailContractReportConsumer>(context);
                     });
                 });
             });

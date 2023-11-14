@@ -13,6 +13,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services
     .AddConfigureApplication(builder.Configuration)
+    .AddConfigureMassTransit(builder.Configuration)
     .AddConfigureInfrastructure(builder.Configuration);
 
 var app = builder.Build();
