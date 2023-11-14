@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using ContactDirectoryService.Application.Features.Contract.Commands.CreateContact;
+using ContactDirectoryService.Application.Features.Contract.Commands.UpdateContact;
 using ContactDirectoryService.Domain.Entities;
 
 namespace ContactDirectoryService.Application.Features.Contract.Mapping
@@ -9,6 +10,7 @@ namespace ContactDirectoryService.Application.Features.Contract.Mapping
         public ContactMapping()
         {
             CreateMap<CreateContactCommand, Contact>();
+            CreateMap<UpdateContactCommand, Contact>();
         }
     }
 }
