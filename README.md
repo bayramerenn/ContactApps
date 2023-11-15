@@ -16,3 +16,10 @@ ApiGateway : http://host.docker.internal:7000/
 ContactDirectoryService.API :  http://host.docker.internal:7001/
 ReportingService.API :  http://host.docker.internal:7002/
 ```
+### Architecture overview
+This reference application provides cross-platform support on both the server and client sides through .NET 7 services capable of running on Linux or Windows. The architecture recommends a microservices-oriented design, including multiple independent microservices, each with its own database. These microservices utilize HTTP as the communication protocol between client applications and microservices. Additionally, the architecture supports the propagation of data updates across multiple services through integration events and event publishing, facilitated by a lightweight messaging tool (such as RabbitMQ).
+
+
+
+
+
