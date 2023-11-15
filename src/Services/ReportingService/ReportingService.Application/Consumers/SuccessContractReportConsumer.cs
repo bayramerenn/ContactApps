@@ -19,9 +19,12 @@ namespace ReportingService.Application.Consumers
         {
             var report = await _context.Reports.FirstOrDefaultAsync(r => r.Id == context.Message.Id);
 
-            report!.Status = ReportStatus.Completed;
+            if (report != null)
+            {
+                report!.Status = ReportStatus.Completed;
 
-            await _context.SaveChangesAsync(default);
+                await _context.SaveChangesAsync(default);
+            }
         }
     }
 }

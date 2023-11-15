@@ -12,7 +12,6 @@ namespace ReportingService.Infrastructure.Persistence.Context
 
         public DbSet<Report> Reports => Set<Report>();
 
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(GetType().Assembly);

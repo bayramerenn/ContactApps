@@ -1,5 +1,4 @@
 ﻿using MediatR;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ContactDirectoryService.API.Controllers
@@ -9,6 +8,7 @@ namespace ContactDirectoryService.API.Controllers
     public class ApiControllerBase : ControllerBase
     {
         private ISender _sender = null!;
+
         protected ISender Sender => _sender ??=
             HttpContext.RequestServices.GetService<ISender>()!;
     }
