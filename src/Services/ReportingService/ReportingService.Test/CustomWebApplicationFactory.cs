@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using MassTransit;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using ReportingService.Application.Consumers;
 using ReportingService.Infrastructure.Persistence.Context;
 using System.Data.Common;
 
@@ -28,6 +30,12 @@ namespace ReportingService.Test
                     {
                         options.UseNpgsql(_connection);
                     });
+
+                services.AddMassTransitTestHarness(x =>
+                {
+                    x.AddConsumer<FailContractReportConsumer>();
+                    x.AddConsumer<SuccessContractReportConsumer>();
+                });
             });
         }
     }

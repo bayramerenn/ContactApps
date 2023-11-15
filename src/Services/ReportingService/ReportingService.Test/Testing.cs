@@ -41,8 +41,6 @@ namespace ReportingService.Test
             await mediator.Send(request);
         }
 
-        public static ITestHarness GetTestHarness() => _factory.Services.GetTestHarness();
-
         public static async Task CacheSaveAsync<T>(T data, string key)
         {
             using var scope = _scopeFactory.CreateScope();

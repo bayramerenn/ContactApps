@@ -1,7 +1,4 @@
-﻿using NUnit.Framework;
-using static ContactDirectoryService.Test.Testing;
-
-namespace ContactDirectoryService.Test
+﻿namespace ContactDirectoryService.Test
 {
     [TestFixture]
     public abstract class BaseTestFixture
