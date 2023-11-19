@@ -2,14 +2,22 @@ using ContactDirectoryService.Application;
 using ContactDirectoryService.Infrastructure;
 using ContactDirectoryService.Infrastructure.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
+using NewInn.Shared.Filters;
 using Shared.Middleware;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.Services.AddControllers(opt =>
+{
+    opt.Filters.Add<DefaultResponseAttribute>();
+})
+.AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+    options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
+});
 
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -20,8 +28,11 @@ builder.Services
 
 var app = builder.Build();
 
-app.UseSwagger();
-app.UseSwaggerUI();
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
 
 app.UseMiddleware<ExceptionHandlingMiddleware>();
 

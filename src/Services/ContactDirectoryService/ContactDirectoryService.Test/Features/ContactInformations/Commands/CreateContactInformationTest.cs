@@ -1,7 +1,7 @@
 ﻿using Ardalis.GuardClauses;
 using ContactDirectoryService.Application.Features.ContactInformations.Command;
 using ContactDirectoryService.Application.Features.Contacts.Commands;
-using ContactDirectoryService.Domain.Enums;
+using Shared.Enums;
 
 namespace ContactDirectoryService.Test.Features.ContactInformations.Commands
 {

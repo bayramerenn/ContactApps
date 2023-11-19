@@ -23,8 +23,7 @@ namespace ReportingService.API.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(CreateLocationReportCommand command, CancellationToken cancellationToken)
         {
-            await Sender.Send(command, cancellationToken);
-            return NoContent();
+            return Ok(await Sender.Send(command, cancellationToken));
         }
     }
 }

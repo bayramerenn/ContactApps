@@ -1,6 +1,6 @@
 ﻿using System.Data.Common;
 
-namespace ReportingService.Test
+namespace ReportingService.Test.DbBehaviors
 {
     public interface ITestDatabase
     {

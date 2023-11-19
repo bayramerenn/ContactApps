@@ -1,5 +1,5 @@
 ﻿using ContactDirectoryService.Application.Features.ContactInformations.Command;
-using ContactDirectoryService.Application.Features.Contacts.Queries;
+using ContactDirectoryService.Application.Features.ContactInformations.Queries;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ContactDirectoryService.API.Controllers
@@ -9,7 +9,7 @@ namespace ContactDirectoryService.API.Controllers
         [HttpGet("{id:guid}")]
         public async Task<IActionResult> Get(Guid id, CancellationToken cancellationToken)
         {
-            return Ok(await Sender.Send(new GetContactDetailQuery(id), cancellationToken));
+            return Ok(await Sender.Send(new GetContactInformationDetailQuery(id), cancellationToken));
         }
 
         [HttpPost]

@@ -1,4 +1,5 @@
 ﻿using ContactDirectoryService.Infrastructure.Persistence.Context;
+using ContactDirectoryService.Test.Features;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
