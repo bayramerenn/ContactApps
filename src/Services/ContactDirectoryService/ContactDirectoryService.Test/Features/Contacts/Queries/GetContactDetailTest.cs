@@ -1,6 +1,7 @@
 ﻿using Ardalis.GuardClauses;
 using ContactDirectoryService.Application.Features.Contacts.Commands;
 using ContactDirectoryService.Application.Features.Contacts.Queries;
+using ContactDirectoryService.Test.BaseTestModels;
 
 namespace ContactDirectoryService.Test.Features.Queries
 {

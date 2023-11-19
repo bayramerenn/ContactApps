@@ -1,4 +1,5 @@
 ﻿using ContactDirectoryService.Application.Features.Contacts.Queries;
+using ContactDirectoryService.Test.BaseTestModels;
 
 namespace ContactDirectoryService.Test.Features.Queries
 {

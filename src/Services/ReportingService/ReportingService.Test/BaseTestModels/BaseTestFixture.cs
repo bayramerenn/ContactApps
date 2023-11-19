@@ -1,4 +1,4 @@
-﻿namespace ReportingService.Test
+﻿namespace ReportingService.Test.BaseTestModels
 {
     [TestFixture]
     public abstract class BaseTestFixture

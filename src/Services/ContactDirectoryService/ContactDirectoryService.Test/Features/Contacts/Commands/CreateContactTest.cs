@@ -1,4 +1,5 @@
 ﻿using ContactDirectoryService.Application.Features.Contacts.Commands;
+using ContactDirectoryService.Test.BaseTestModels;
 
 namespace ContactDirectoryService.Test.Features.Contacts.Commands
 {

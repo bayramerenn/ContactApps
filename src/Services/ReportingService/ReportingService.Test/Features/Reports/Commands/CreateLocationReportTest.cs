@@ -1,5 +1,6 @@
 ﻿using Ardalis.GuardClauses;
 using ReportingService.Application.Features.Reports.Commands;
+using ReportingService.Test.BaseTestModels;
 
 namespace ReportingService.Test.Application.Features.Reports.Commands
 {

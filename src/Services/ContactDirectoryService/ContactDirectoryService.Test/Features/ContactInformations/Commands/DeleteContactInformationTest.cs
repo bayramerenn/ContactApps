@@ -2,6 +2,7 @@
 using ContactDirectoryService.Application.Features.ContactInformations.Command;
 using ContactDirectoryService.Application.Features.Contacts.Commands;
 using ContactDirectoryService.Domain.Entities;
+using ContactDirectoryService.Test.BaseTestModels;
 using MediatR;
 using Shared.Enums;
 

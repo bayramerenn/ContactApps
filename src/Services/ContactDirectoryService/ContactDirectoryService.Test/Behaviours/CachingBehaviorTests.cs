@@ -1,5 +1,6 @@
 ﻿using ContactDirectoryService.Application.Common.Behaviours.Caching;
 using ContactDirectoryService.Application.Features.ContactInformations.Queries;
+using ContactDirectoryService.Test.BaseTestModels;
 using Microsoft.Extensions.Options;
 using Moq;
 using Shared.CacheService;
