@@ -1,4 +1,4 @@
-﻿namespace ReportingService.Test
+﻿namespace ContactDirectoryService.Test.Features
 {
     public static class TestDatabaseFactory
     {

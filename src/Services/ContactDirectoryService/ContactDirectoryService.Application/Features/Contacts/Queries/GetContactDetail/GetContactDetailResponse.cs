@@ -1,4 +1,4 @@
-﻿using ContactDirectoryService.Domain.Enums;
+﻿using ContactDirectoryService.Application.Features.ContactInformations.Queries;
 
 namespace ContactDirectoryService.Application.Features.Contacts.Queries
 {
@@ -8,13 +8,6 @@ namespace ContactDirectoryService.Application.Features.Contacts.Queries
         public string FirstName { get; init; } = null!;
         public string LastName { get; init; } = null!;
         public string Company { get; init; } = null!;
-        public IEnumerable<ContactInformationResponse>? ContactInformations { get; init; }
-    }
-
-    public record ContactInformationResponse
-    {
-        public Guid Id { get; init; }
-        public ContactType ContactType { get; set; }
-        public string Content { get; set; } = null!;
+        public IEnumerable<GetContactInformationDetailResponse>? ContactInformations { get; init; }
     }
 }

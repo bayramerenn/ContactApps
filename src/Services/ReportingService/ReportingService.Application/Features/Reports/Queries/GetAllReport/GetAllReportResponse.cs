@@ -4,8 +4,8 @@ namespace ReportingService.Application.Features.Reports.Queries
 {
     public record GetAllReportResponse
     {
-        public Guid Id { get; set; }
-        public DateTime CreatedOn { get; set; }
-        public ReportStatus Status { get; set; }
+        public Guid Id { get; init; }
+        public DateTime CreatedOn { get; init; }
+        public ReportStatus Status { get; init; }
     }
 }

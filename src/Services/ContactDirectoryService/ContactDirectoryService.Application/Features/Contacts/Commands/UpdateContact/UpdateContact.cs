@@ -7,14 +7,14 @@ using Shared.Constants;
 
 namespace ContactDirectoryService.Application.Features.Contacts.Commands
 {
-    public record UpdateContactCommand(Guid Id, string FirstName, string LastName, string Company) : IRequest<Unit>, ICacheRemoverRequest
+    public record UpdateContactCommand(Guid Id, string FirstName, string LastName, string Company) : IRequest, ICacheRemoverRequest
     {
         public bool BypassCache => false;
 
         public string CacheKey => CacheKeyConstant.RemoveReportKey;
     }
 
-    public class UpdateContactCommandHandler : IRequestHandler<UpdateContactCommand, Unit>
+    public class UpdateContactCommandHandler : IRequestHandler<UpdateContactCommand>
     {
         private readonly IApplicationDbContext _context;
         private readonly IMapper _mapper;
@@ -26,7 +26,7 @@ namespace ContactDirectoryService.Application.Features.Contacts.Commands
             _mapper = mapper;
         }
 
-        public async Task<Unit> Handle(UpdateContactCommand request, CancellationToken cancellationToken)
+        public async Task Handle(UpdateContactCommand request, CancellationToken cancellationToken)
         {
             var oldContact = await _context.Contacts.FindAsync(request.Id, cancellationToken);
 
@@ -35,8 +35,6 @@ namespace ContactDirectoryService.Application.Features.Contacts.Commands
             _mapper.Map(request, oldContact);
 
             await _context.SaveChangesAsync(cancellationToken);
-
-            return Unit.Value;
         }
     }
 }

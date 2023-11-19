@@ -2,6 +2,7 @@
 using ContactDirectoryService.Application.Features.ContactInformations.Command;
 using Moq;
 using Shared.CacheService;
+using Shared.Enums;
 
 namespace ContactDirectoryService.Test.Behaviours
 {
@@ -14,7 +15,7 @@ namespace ContactDirectoryService.Test.Behaviours
 
             var cachingBehavior = new CacheRemovingBehavior<CreateContactInformationCommand, Guid>(cacheMock.Object);
 
-            var query = new CreateContactInformationCommand(Guid.NewGuid(), Domain.Enums.ContactType.Phone, "1234");
+            var query = new CreateContactInformationCommand(Guid.NewGuid(), ContactType.Phone, "1234");
 
             cacheMock.Setup(x => x.RemovePatternAsync(It.IsAny<string>(), 0))
                 .Returns(Task.CompletedTask);

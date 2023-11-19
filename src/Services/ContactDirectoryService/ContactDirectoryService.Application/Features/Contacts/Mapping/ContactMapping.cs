@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using ContactDirectoryService.Application.Features.ContactInformations.Queries;
 using ContactDirectoryService.Application.Features.Contacts.Commands;
 using ContactDirectoryService.Application.Features.Contacts.Queries;
 using ContactDirectoryService.Domain.Entities;
@@ -13,7 +14,7 @@ namespace ContactDirectoryService.Application.Features.Contacts.Mapping
             CreateMap<UpdateContactCommand, Contact>();
             CreateMap<Contact, GetContactDetailResponse>();
             CreateMap<Contact, GetContactListResponse>();
-            CreateMap<ContactInformation, ContactInformationResponse>();
+            CreateMap<ContactInformation, GetContactInformationDetailResponse>();
         }
     }
 }

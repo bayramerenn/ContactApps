@@ -41,4 +41,8 @@
 		<ProjectReference Include="..\ContactDirectoryService.API\ContactDirectoryService.API.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="DbBehaviors\" />
+	</ItemGroup>
+
 </Project>

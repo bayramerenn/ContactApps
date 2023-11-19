@@ -1,5 +1,5 @@
-﻿using ContactDirectoryService.Domain.Enums;
-using Shared.BaseModels;
+﻿using Shared.BaseModels;
+using Shared.Enums;
 
 namespace ContactDirectoryService.Domain.Entities
 {

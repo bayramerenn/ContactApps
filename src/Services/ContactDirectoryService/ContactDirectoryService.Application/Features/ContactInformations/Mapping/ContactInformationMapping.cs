@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using ContactDirectoryService.Application.Features.ContactInformations.Command;
+using ContactDirectoryService.Application.Features.ContactInformations.Queries;
 using ContactDirectoryService.Domain.Entities;
 
 namespace ContactDirectoryService.Application.Features.ContactInformations.Mapping
@@ -9,6 +10,7 @@ namespace ContactDirectoryService.Application.Features.ContactInformations.Mappi
         public ContactInformationMapping()
         {
             CreateMap<CreateContactInformationCommand, ContactInformation>();
+            CreateMap<ContactInformation, GetContactInformationDetailResponse>();
         }
     }
 }

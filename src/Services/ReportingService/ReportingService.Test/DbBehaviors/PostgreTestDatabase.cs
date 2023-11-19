@@ -6,7 +6,7 @@ using ReportingService.Infrastructure.Persistence.Context;
 using Respawn;
 using System.Data.Common;
 
-namespace ReportingService.Test
+namespace ReportingService.Test.DbBehaviors
 {
     public class PostgreTestDatabase : ITestDatabase
     {

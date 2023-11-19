@@ -1,7 +1,7 @@
-﻿using MassTransit.Testing;
-using MediatR;
+﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using ReportingService.Infrastructure.Persistence.Context;
+using ReportingService.Test.DbBehaviors;
 using Shared.CacheService;
 
 namespace ReportingService.Test

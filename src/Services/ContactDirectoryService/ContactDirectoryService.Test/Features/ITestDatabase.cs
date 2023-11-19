@@ -1,6 +1,6 @@
 ﻿using System.Data.Common;
 
-namespace ContactDirectoryService.Test
+namespace ContactDirectoryService.Test.Features
 {
     public interface ITestDatabase
     {

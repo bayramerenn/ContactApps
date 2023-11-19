@@ -3,10 +3,10 @@ using AutoMapper;
 using ContactDirectoryService.Application.Common.Behaviours.Caching;
 using ContactDirectoryService.Application.Common.Interfaces;
 using ContactDirectoryService.Domain.Entities;
-using ContactDirectoryService.Domain.Enums;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Shared.Constants;
+using Shared.Enums;
 using Shared.Exceptions;
 
 namespace ContactDirectoryService.Application.Features.ContactInformations.Command

@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Shared.BaseModels;
 using Shared.Exceptions;
-using System.Diagnostics;
 using System.Net;
 using ValidationException = Shared.Exceptions.ValidationException;
 
@@ -38,19 +37,20 @@ namespace Shared.Middleware
             context.Response.ContentType = "application/json";
 
             HttpStatusCode code = HttpStatusCode.InternalServerError;
-            string? traceId = Activity.Current?.TraceId.ToString();
             string message = exception.Message;
 
             if (exception is ValidationException validation)
             {
                 context.Response.StatusCode = (int)HttpStatusCode.NotFound;
 
-                await context.Response.WriteAsync(new ErrorDetails
+                var apiResponse = new ApiResponse<object>
                 {
-                    TraceId = traceId,
+                    StatusCode = context.Response.StatusCode,
                     Message = message,
                     Errors = validation.Errors
-                }.ToString());
+                };
+
+                await context.Response.WriteAsync(apiResponse.ToString());
             }
             else
             {
@@ -73,10 +73,10 @@ namespace Shared.Middleware
 
                 context.Response.StatusCode = (int)code;
 
-                await context.Response.WriteAsync(new ErrorDetails
+                await context.Response.WriteAsync(new ApiResponse<object>
                 {
-                    TraceId = traceId,
-                    Message = message
+                    StatusCode = context.Response.StatusCode,
+                    Message = message,
                 }.ToString());
             }
         }

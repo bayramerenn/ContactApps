@@ -27,7 +27,8 @@ namespace ContactDirectoryService.API.Controllers
         [HttpPut]
         public async Task<IActionResult> Update(UpdateContactCommand command, CancellationToken cancellationToken)
         {
-            return Ok(await Sender.Send(command, cancellationToken));
+            await Sender.Send(command, cancellationToken);
+            return NoContent();
         }
 
         [HttpDelete("{id:guid}")]

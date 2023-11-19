@@ -1,51 +1,25 @@
-using ApiGateway.Filters;
-using Ocelot.DependencyInjection;
-using Ocelot.Middleware;
+using ApiGateway.Extensions;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddCors(options =>
+builder.Services.AddControllers()
+.AddJsonOptions(options =>
 {
-    options.AddPolicy("AllowAnyOrigin",
-        builder => builder
-            .AllowAnyOrigin()
-            .AllowAnyMethod()
-            .AllowAnyHeader());
+    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+    options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
 });
 
-builder.Configuration.AddJsonFile($"ocelot.{builder.Environment.EnvironmentName}.json", true, true);
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
-builder.Services.AddOcelot(builder.Configuration);
-
-builder.Services.AddSwaggerForOcelot(builder.Configuration, swagger =>
-{
-    swagger.GenerateDocsDocsForGatewayItSelf(opt =>
-    {
-        opt.GatewayDocsTitle = "ApiGateway";
-        opt.GatewayDocsOpenApiInfo = new()
-        {
-            Title = "ApiGateway",
-            Version = "v1",
-        };
-
-        opt.DocumentFilter<SwaggerDocumentFilter>();
-    });
-});
-
-builder.Services.AddControllers();
+builder.Services.AddConfigureHttpClientServices(builder.Configuration);
 
 var app = builder.Build();
 
-app.UseCors("AllowAnyOrigin");
+app.UseSwagger();
+app.UseSwaggerUI();
 
-app.UseSwaggerForOcelotUI(opt =>
-{
-    opt.PathToSwaggerGenerator = "/swagger/docs";
-}, uiOpt =>
-{
-    uiOpt.DefaultModelsExpandDepth(-1);
-});
-app.UseOcelot()
-   .Wait();
+app.MapControllers();
 
 app.Run();

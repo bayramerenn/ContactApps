@@ -1,9 +1,9 @@
 ﻿using ContactDirectoryService.Application.Common.Behaviours.Caching;
 using ContactDirectoryService.Application.Common.Interfaces;
-using ContactDirectoryService.Domain.Enums;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Shared.Constants;
+using Shared.Enums;
 
 namespace ContactDirectoryService.Application.Features.ContactInformations.Queries
 {
