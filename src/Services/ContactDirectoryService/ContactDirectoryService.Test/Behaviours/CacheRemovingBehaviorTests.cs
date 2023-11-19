@@ -1,5 +1,6 @@
 ﻿using ContactDirectoryService.Application.Common.Behaviours.Caching;
 using ContactDirectoryService.Application.Features.ContactInformations.Command;
+using ContactDirectoryService.Test.BaseTestModels;
 using Moq;
 using Shared.CacheService;
 using Shared.Enums;

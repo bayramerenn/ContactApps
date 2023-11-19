@@ -1,6 +1,7 @@
 ﻿using Ardalis.GuardClauses;
 using ReportingService.Application.Features.Reports.Commands;
 using ReportingService.Application.Features.Reports.Queries;
+using ReportingService.Test.BaseTestModels;
 using Shared.Constants;
 
 namespace ReportingService.Test.Application.Features.Reports.Queries

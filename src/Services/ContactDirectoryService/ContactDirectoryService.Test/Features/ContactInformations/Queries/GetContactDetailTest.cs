@@ -1,6 +1,7 @@
 ﻿using ContactDirectoryService.Application.Features.ContactInformations.Command;
 using ContactDirectoryService.Application.Features.ContactInformations.Queries;
 using ContactDirectoryService.Application.Features.Contacts.Commands;
+using ContactDirectoryService.Test.BaseTestModels;
 using Shared.Enums;
 
 namespace ContactDirectoryService.Test.Features.ContactInformations.Queries

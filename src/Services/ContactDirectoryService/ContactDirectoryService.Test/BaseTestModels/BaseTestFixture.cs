@@ -1,4 +1,4 @@
-﻿namespace ContactDirectoryService.Test
+﻿namespace ContactDirectoryService.Test.BaseTestModels
 {
     [TestFixture]
     public abstract class BaseTestFixture
